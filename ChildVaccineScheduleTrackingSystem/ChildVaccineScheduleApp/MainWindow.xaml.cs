@@ -42,4 +42,62 @@ public partial class MainWindow : Window
         //    btnDelete.IsEnabled = true;
         //}
     }
+
+    private void ShowChildrenProfile_Click(object sender, RoutedEventArgs e)
+    {
+
+    }
+
+    private void ShowVaccineSchedule_Click(object sender, RoutedEventArgs e)
+    {
+
+    }
+
+    private void ShowBooking_Click(object sender, RoutedEventArgs e)
+    {
+
+    }
+
+    private void ShowNotifications_Click(object sender, RoutedEventArgs e)
+    {
+
+    }
+
+    private void ShowReactions_Click(object sender, RoutedEventArgs e)
+    {
+
+    }
+
+    private void ShowUserProfile_Click(object sender, RoutedEventArgs e)
+    {
+
+    }
+
+    private void AddChild_Click(object sender, RoutedEventArgs e)
+    {
+
+    }
+
+    private void Logout_Click(object sender, RoutedEventArgs e)
+    {
+        // Clear the current user's session
+        // App.CurrentUser = null; // Uncomment this line if you have a CurrentUser property in App.xaml.cs
+
+        // Open the LoginWindow
+        LoginWindow loginWindow = new LoginWindow();
+        loginWindow.Show();
+
+        // Close the MainWindow
+        this.Close();
+
+    }
+    private void EditChild_Click(object sender, RoutedEventArgs e)
+    {
+        MessageBox.Show("Edit child information - Implement logic to update tblChildren");
+    }
+
+    private void ViewChildDetails_Click(object sender, RoutedEventArgs e)
+    {
+        MessageBox.Show("View details");
+    }
 }

@@ -5,8 +5,57 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ChildVaccineScheduleApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+       Title="Child Vaccine Schedule Tracking" Height="600" Width="1000"
+        WindowStartupLocation="CenterScreen">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
 
+        <StackPanel Grid.Column="0" Background="LightGray">
+            <Button Content="Children Profile" Click="ShowChildrenProfile_Click" Margin="5" Padding="5"/>
+            <Button Content="Vaccine Schedule" Click="ShowVaccineSchedule_Click" Margin="5" Padding="5"/>
+            <Button Content="Book Appointment" Click="ShowBooking_Click" Margin="5" Padding="5"/>
+            <Button Content="Notifications" Click="ShowNotifications_Click" Margin="5" Padding="5"/>
+            <Button Content="Post-Injection Reactions" Click="ShowReactions_Click" Margin="5" Padding="5"/>
+            <Button Content="User Profile" Click="ShowUserProfile_Click" Margin="5" Padding="5"/>
+        </StackPanel>
+
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Right" Margin="5">
+                <TextBlock Text="Logged in as: " VerticalAlignment="Center"/>
+                <TextBlock x:Name="UsernameText" Text="{Binding CurrentUser.Username}" VerticalAlignment="Center"/>
+                <Button Content="Logout" Click="Logout_Click" Margin="10,0,0,0" Padding="5"/>
+            </StackPanel>
+
+            <ContentControl x:Name="MainContent" Grid.Row="1" Margin="10">
+                <StackPanel x:Name="ChildrenProfilePanel">
+                    <Button Content="Add Child" Click="AddChild_Click" HorizontalAlignment="Left" Margin="5" Padding="5"/>
+                    <DataGrid x:Name="ChildrenGrid" AutoGenerateColumns="False" IsReadOnly="True" Margin="5">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Child Name" Binding="{Binding ChildName}" Width="*"/>
+                            <DataGridTextColumn Header="Date of Birth" Binding="{Binding DateOfBirth}" Width="*"/>
+                            <DataGridTextColumn Header="Gender" Binding="{Binding Gender}" Width="*"/>
+                            <DataGridTemplateColumn Header="Actions" Width="Auto">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <StackPanel Orientation="Horizontal">
+                                            <Button Content="Edit" Click="EditChild_Click" Margin="2" Padding="2"/>
+                                            <Button Content="View Details" Click="ViewChildDetails_Click" Margin="2" Padding="2"/>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </StackPanel>
+            </ContentControl>
+        </Grid>
     </Grid>
 </Window>
