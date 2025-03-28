@@ -3,7 +3,31 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.13.35806.99 d17.13
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChildVaccineScheduleApp", "ChildVaccineScheduleApp\ChildVaccineScheduleApp.csproj", "{093303BB-0F0E-41BD-A46E-B77C80A98EEF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChilVaccineScheduleApp.DAL", "ChilVaccineScheduleApp.DAL\ChilVaccineScheduleApp.DAL.csproj", "{5765D269-E2B4-4793-A1B2-3DB28E9699E9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChildVaccineScheduleApp.BLL", "ChildVaccineScheduleApp.BLL\ChildVaccineScheduleApp.BLL.csproj", "{86FFA9F9-9F85-48B6-AC1E-13AFA2FA5712}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{093303BB-0F0E-41BD-A46E-B77C80A98EEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{093303BB-0F0E-41BD-A46E-B77C80A98EEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{093303BB-0F0E-41BD-A46E-B77C80A98EEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{093303BB-0F0E-41BD-A46E-B77C80A98EEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5765D269-E2B4-4793-A1B2-3DB28E9699E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5765D269-E2B4-4793-A1B2-3DB28E9699E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5765D269-E2B4-4793-A1B2-3DB28E9699E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5765D269-E2B4-4793-A1B2-3DB28E9699E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86FFA9F9-9F85-48B6-AC1E-13AFA2FA5712}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86FFA9F9-9F85-48B6-AC1E-13AFA2FA5712}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86FFA9F9-9F85-48B6-AC1E-13AFA2FA5712}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86FFA9F9-9F85-48B6-AC1E-13AFA2FA5712}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
