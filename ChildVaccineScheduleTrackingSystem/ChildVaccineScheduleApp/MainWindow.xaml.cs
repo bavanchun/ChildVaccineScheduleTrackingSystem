@@ -16,8 +16,30 @@ namespace ChildVaccineScheduleApp;
 /// </summary>
 public partial class MainWindow : Window
 {
+
+    //private FootballPlayerService _service = new();
+
+    //public Uefaaccount AuthenticatedAccount { get; set; }
+
     public MainWindow()
     {
         InitializeComponent();
+        ApplyPermissions();
+    }
+
+    private void ApplyPermissions()
+    {
+        //if (App.CurrentUser.Role == "Staff")
+        //{
+        //    btnCreate.IsEnabled = false; // Chỉ đọc
+        //    btnUpdate.IsEnabled = false;
+        //    btnDelete.IsEnabled = false;
+        //}
+        //else if (App.CurrentUser.Role == "Doctor")
+        //{
+        //    btnCreate.IsEnabled = true; // Cho phép CRUD
+        //    btnUpdate.IsEnabled = true;
+        //    btnDelete.IsEnabled = true;
+        //}
     }
 }
